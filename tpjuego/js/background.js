@@ -16,6 +16,7 @@ backgroundLayer4.src = 'image/layer-4.png';
 const backgroundLayer5 = new Image();
 backgroundLayer5.src = 'image/layer-5.png';
 
+
 class Layer {
     constructor(image, speedModifier){
         this.x = 0;
