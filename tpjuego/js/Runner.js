@@ -6,10 +6,20 @@ class Runner extends Character{
         super();
         this.character = document.getElementById("player");
     }
-    
+
     status(){
-        this.character.getBoundingClientRect();
+        let pos = this.character.getBoundingClientRect();
+        return(pos.x);
     }
+
+    // posX(){
+    //     let posX = this.character.getBoundingClientRect();
+    //     return(posX.x);
+    // }
+    // posY(){
+    //     let posY = this.character.getBoundingClientRect();
+    //     return(posY.y);
+    // }
 
     correr(){
         this.clean();
