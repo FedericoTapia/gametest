@@ -5,11 +5,27 @@ class Runner extends Character{
     constructor(){
         super();
         this.character = document.getElementById("player");
+        
+        
+
     }
 
     status(){
-        let pos = this.character.getBoundingClientRect();
-        return(pos.x);
+        this.pos = this.character.getBoundingClientRect();
+        //this.posX = this.pos.x;
+        //this.posY = this.pos.y;
+        //this.width = this.pos.width;
+        //this.height = this.pos.height;
+        this.right = this.pos.right;
+        this.left = this.pos.left;
+        this.top = this.pos.top;
+        this.bottom = this.pos.bottom;
+        
+        return [this.right, this.left, this.top, this.bottom];
+        //console.log("derecha: " + this.right);
+        //console.log("izquierda: " + this.left);
+        //console.log("arriba: " + this.top);
+        //console.log("abajo: " + this.bottom);
     }
 
     // posX(){
