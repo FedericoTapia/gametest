@@ -10,51 +10,90 @@ body{
     top: 50%;
     left: 50%;
 }
-/*
+
 #player {
-   
-    width: 80px;
-    height: 280px;
-    background: url("/tpjuego/image/Run-Sheet.png") repeat-x;
-
-    transform: scale(2.5);
-    animation: walk .6s steps(8) infinite;
-    
-    position: absolute;
-
-    left: 84px;
-    bottom: -12px;
-  }
-  
-  @keyframes walk {
-    from { background-position: 0 }
-    to { background-position: -640px }
-  }
-  */
-
-  #player {
     width: 80px;
     height: 50px;
-
     position: absolute;
-    transform: scale(1.8);
-    bottom: 35px;;
+    transform: scale(2.2);
+    bottom: 35px;
     left: 100px;
     background: url("/tpjuego/image/Run-Sheet.png") repeat-x;
-    animation: walk .6s steps(8) infinite;
+    
 }
-@keyframes walk {
-    from { background-position: 0 }
-    to { background-position: -640px }
-  }
+
+/*background: url("/tpjuego/image/Jump-All-Sheet.png") repeat-x;*/
+
 .correr {
     animation: correr .6s steps(8) infinite;
 }
 
 .saltar {
-    animation: saltar 800ms cubic-bezier(0,0,.5,1) forwards; 
-}
+    animation: saltar 600ms cubic-bezier(0,0,.7,1) forwards; 
+    }
+
+/*
+.saltar {
+    animation: saltar 600ms steps(4) forwards; 
+    background: url("/tpjuego/image/Jump-Start-Sheet.png");
+    }
+*/
 
 .caer {
-    animation: caer 600ms cubic-bezier(0,0,.5,1) forwards;
+    animation: caer 600ms cubic-bezier(0,0,.7,1) forwards;
+}
+
+@keyframes correr {
+    from { background-position: 0 }
+    to { background-position: -640px }
+  }
+
+@keyframes saltar {
+    
+    from {        
+        bottom: 5%;
+    }
+    to {
+        bottom: 40%;
+    }
+   
+}
+
+@keyframes caer {
+    from {
+        bottom: 40%;
+    }
+    to {
+        bottom: 5%;
+    }
+}
+
+
+
+.enemy {
+    position: absolute;
+    bottom: 35px;
+    width: 48px;
+    height: 32px;
+    transform: scale(3);
+    background: url("/tpjuego/image/walk-Sheet.png") repeat-x;
+    
+    animation: enemigo 2.5s forwards linear,  enemigoMove 0.5s steps(8) infinite;
+}
+
+
+@keyframes enemigoMove {
+    from { 
+        background-position: 0px }
+    to { 
+        background-position: -384px }
+}
+
+@keyframes enemigo {
+    from { 
+        left: 90%;
+}
+    to { 
+        left: -10%;
+}
 }
