@@ -2,6 +2,7 @@ body{
     background-color: black;
     max-height: 100%;
 }
+
 #canvas1{
     position: absolute;
     width: 100%;
@@ -14,13 +15,10 @@ body{
 #player {
     position: absolute;
     transform: scale(2.2);
-    bottom: 35px;
+    bottom: 5%;
     left: 100px;
-    /*background: url("/tpjuego/image/Run-Sheet.png") repeat-x;*/
-    
 }
 
-/*background: url("/tpjuego/image/Jump-All-Sheet.png") repeat-x;*/
 
 .correr {
     width: 80px;
@@ -29,30 +27,21 @@ body{
     animation: correr .6s steps(8) infinite;
 }
 
-/*.saltar {
-    animation: saltar 600ms cubic-bezier(0,0,.7,1) forwards; 
-    }
-*/
 
 .saltar {
     width:63.5px;
     height: 64px;
     background: url("/tpjuego/image/Jump-Start-Sheet.png");
-    animation: saltar .6s steps(4) forwards; 
+    animation: saltar .4s steps(4) forwards; 
     
     }
 
     .caer {
-        width:64px;
+        width:63.5px;
         height: 64px;
-        background: url("/tpjuego/image/Jump-End-Sheet.png");
-        animation: caer .6s steps(3) forwards;
+        background: url("/tpjuego/image/jump-end.png");
+        animation: caer .4s steps(4) forwards;
     }
-/*     
-.caer {
-    background: url("/tpjuego/image/Jump-End-Sheet.png");
-    animation: caer 600ms cubic-bezier(0,0,.7,1) forwards;
-} */
 
 @keyframes correr {
     from { background-position: 0 }
@@ -67,7 +56,7 @@ body{
     }
     to {
         background-position: -254px;
-        bottom: 40%;
+        bottom: 45%;
     }
    
 }
@@ -75,11 +64,11 @@ body{
 @keyframes caer {
     from {
         background-position: 0px;
-        bottom: 40%;
+        bottom: 35%;
     }
     to {
-        background-position: -192px;
-        bottom: 15%;
+        background-position: -254px;
+        bottom: 5%;
     }
 }
 
@@ -88,14 +77,12 @@ body{
 .enemy {
     position: absolute;
     bottom: 35px;
-    width: 48px;
-    height: 32px;
+    width: 38px;
+    height: 30px;
     transform: scale(3);
     background: url("/tpjuego/image/walk-Sheet.png") repeat-x;
-    
     animation: enemigo 2.5s forwards linear,  enemigoMove 0.5s steps(8) infinite;
 }
-
 
 @keyframes enemigoMove {
     from { 

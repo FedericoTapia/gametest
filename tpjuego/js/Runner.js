@@ -1,43 +1,16 @@
 // cambiar nombre a player
-console.log('aca toy');
+
 class Runner extends Character{
 
     constructor(){
         super();
         this.character = document.getElementById("player");
-        
-        
-
     }
 
     status(){
-        this.pos = this.character.getBoundingClientRect();
-        //this.posX = this.pos.x;
-        //this.posY = this.pos.y;
-        //this.width = this.pos.width;
-        //this.height = this.pos.height;
-        
-        //this.right = this.pos.right;
-        //this.left = this.pos.left;
-        //this.top = this.pos.top;
-        //this.bottom = this.pos.bottom;
-        
-        //return [this.right, this.left, this.top, this.bottom];
+        this.pos = this.character.getBoundingClientRect();  
         return this.pos;
-        //console.log("derecha: " + this.right);
-        //console.log("izquierda: " + this.left);
-        //console.log("arriba: " + this.top);
-        //console.log("abajo: " + this.bottom);
     }
-
-    // posX(){
-    //     let posX = this.character.getBoundingClientRect();
-    //     return(posX.x);
-    // }
-    // posY(){
-    //     let posY = this.character.getBoundingClientRect();
-    //     return(posY.y);
-    // }
 
     correr(){
         this.clean();
@@ -53,8 +26,7 @@ class Runner extends Character{
 
             this.character.addEventListener("animationend", ()=>{
                 this.caer();
-            });
-            
+            }); 
         }
     }
 
