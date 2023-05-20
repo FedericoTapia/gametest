@@ -30,10 +30,14 @@ class Runner extends Character{
         }
     }
 
+    muerte(){
+        this.clean();
+        this.character.classList.add("muerte");
+        
+    }
     caer(){
         this.clean();
         this.character.classList.add("caer");
-
         this.character.addEventListener("animationend", () => {
             this.correr();
         });

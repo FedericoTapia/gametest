@@ -27,6 +27,17 @@ body{
     animation: correr .6s steps(8) infinite;
 }
 
+.muerte {
+    width: 80px;
+    height: 50px;
+    background: url("/tpjuego/image/Dead-Sheet.png") repeat-x;
+    animation: muerte 0.9s steps(7) forwards;
+}
+@keyframes muerte {
+    from { background-position: 0 }
+    to { background-position: -560px }
+  }
+
 
 .saltar {
     width:63.5px;
