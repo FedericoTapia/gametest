@@ -12,7 +12,6 @@ class Layer {
     }
     update(){
         //controla la posicion del parallax para evitar que queden gap entre la imagen, la cual se duplica para evitar el salto a la hora del loop
-        this.speed = this.gameSpeed * this.speedModifier;
         if(this.x <= -this.width){
             this.x = this.width + this.x2 - this.speed;
         }

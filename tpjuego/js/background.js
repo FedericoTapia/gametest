@@ -23,15 +23,16 @@ class Background{
         this.gameObjects = [this.layer1, this.layer2, this.layer3, this.layer4, this.layer5];
     }
 
-    animate(canvas, ctx){
-        //ctx.clearRect(0,0, canvas.width,canvas.height);
-    
-        this.gameObjects.forEach(object => {
-            object.update();
-            object.draw(ctx);
-        })
-        requestAnimationFrame(this.animate);
-    };
+    animate = (canvas, ctx) => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+        this.gameObjects.forEach((object) => {
+          object.update();
+          object.draw(ctx);
+        });
+      
+        requestAnimationFrame(() => this.animate(canvas, ctx)); // Use arrow function to preserve the correct context
+      };
 
     stop(){
         this.gameObjects.forEach(object => {
