@@ -1,6 +1,6 @@
 // cambiar nombre a player
 
-class Runner extends Character{
+class Player extends Character{
 
     constructor(){
         super();

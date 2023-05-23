@@ -11,37 +11,16 @@ canvas.height = 700;
 const game = new Game();
 
 game.start(canvas, ctx);
-let runner = new Runner();
-const enemigos = [];
 
-document.addEventListener('keydown', ()=>{
-    runner.saltar();
-});
+//const enemigos = [];
+
 
 /* cada 50 milisegundos verifica estado del juego */
-setInterval(gameLoop, 500);
-
-/* cada 1.5 segundo genera un enemigo */
-setInterval(generateEnemy, Math.random() * (3000 - 1500) + 1500);
+//setInterval(gameLoop, 500);
 
 
-function generateEnemy() {
-    let enemy = new Enemy();
-    enemigos.push(enemy);
 
-}
-
-/**
- * Chequear estado del runner y de los enemigos
- */
-function gameLoop() {
-    enemigos.forEach(Object => {
-        if (Object.status().x < 1) {
-            Object.destroy();
-            enemigos.shift(Object);
-        }
-    });
-}
+/* //destruye los enemigos
 
 function checkCollision() {
     const rect1 = runner.status();
@@ -59,3 +38,4 @@ function checkCollision() {
     
 }
 setInterval(checkCollision, 700);
+*/
