@@ -1,5 +1,3 @@
-// cambiar nombre a player
-
 class Player extends Character{
 
     constructor(){
@@ -20,10 +18,7 @@ class Player extends Character{
     saltar(){
         if (this.character.classList.contains("correr")) {
             this.clean();
-
             this.character.classList.add("saltar");
-
-
             this.character.addEventListener("animationend", ()=>{
                 this.caer();
             }); 
@@ -33,7 +28,6 @@ class Player extends Character{
     muerte(){
         this.clean();
         this.character.classList.add("muerte");
-        
     }
     caer(){
         this.clean();

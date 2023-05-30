@@ -8,10 +8,12 @@ class Enemy extends Character{
     }
     destroy(){
         document.getElementById("enemys").removeChild(this.enemy);
-        console.log("chau caracolito");
     }
     status(){
         this.pos = this.enemy.getBoundingClientRect();
         return this.pos;
+    }
+    stop(){
+        this.enemy = undefined;
     }
 }

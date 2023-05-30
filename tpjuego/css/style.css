@@ -1,6 +1,7 @@
 body{
     background-color: black;
     max-height: 100%;
+    margin: 0;
 }
 
 #canvas1{
@@ -84,6 +85,24 @@ body{
 }
 
 
+.item{
+    position: absolute;
+    bottom: 30%;
+    width: 20px;
+    height: 20px;
+    transform: scale(2);
+    background: url("/tpjuego/image/item.png") repeat-x;
+    animation: item 2.5s forwards linear;
+}
+
+@keyframes item{
+    from { 
+        left: 90%;
+    }
+    to { 
+        left: -10%;
+    }
+}
 
 .enemy {
     position: absolute;
@@ -109,4 +128,81 @@ body{
     to { 
         left: -10%;
 }
+
+}
+#counter{
+    position: absolute;
+    background-color: black;
+    width: 100px;
+    height: 25px;
+    left: 45%;
+    margin-top: 0;
+}
+#record{
+    position: absolute;
+    background-color: black;
+    width: 120px;
+    height: 25px;
+    left: 0;
+    margin-top: 0;
+}
+h2{
+    color: white;
+    text-align: center;
+}
+#gameover{
+    position: absolute;
+    font-family: cursive;
+    background-color: red;
+    width: 200px;
+    height: 40px;
+    left: 41%;
+    margin-top: 20%;
+}
+#restart{
+    position: absolute;
+    font-family: cursive;
+    font-style: italic;
+    background-color: green;
+    width: 150px;
+    height: 40px;
+    left: 43%;
+    margin-top: 25%;
+}
+a{
+    text-decoration: none;
+}
+#backIndex{
+    width:1360px;
+    height:650px;
+    position: relative;
+    display: inline-block;
+
+}
+#startGame{
+    color: white;
+    font-size: 50px;
+    font-family: cursive;
+    font-style: italic;
+    background-color: rgb(161, 33, 33);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#info{
+    color: white;
+    font-family: cursive;
+    font-style: italic;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#data{
+    background-color: green;
 }

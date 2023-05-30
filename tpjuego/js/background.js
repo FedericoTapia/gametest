@@ -1,7 +1,6 @@
 class Background{
 
     constructor(){
-
         this.backgroundLayer1 = new Image(); //cielo
         this.backgroundLayer1.src = 'image/layer-1.png';
         this.backgroundLayer2 = new Image(); 
@@ -12,7 +11,6 @@ class Background{
         this.backgroundLayer4.src = 'image/layer-4.png';
         this.backgroundLayer5 = new Image();
         this.backgroundLayer5.src = 'image/layer-5.png';
-
 
         this.layer1 = new Layer(this.backgroundLayer1, 0.1);
         this.layer2 = new Layer(this.backgroundLayer2, 0.2);
@@ -29,7 +27,6 @@ class Background{
           object.update();
           object.draw(ctx);
         });
-
         requestAnimationFrame(() => this.animate(canvas, ctx)); // Use arrow function to preserve the correct context
       };
 
@@ -37,7 +34,6 @@ class Background{
         this.gameObjects.forEach(object => {
             object.stop();
         })
-
     }
 }
 
